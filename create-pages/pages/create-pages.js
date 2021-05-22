@@ -6,7 +6,7 @@ const pageArchiveTemplate = require.resolve(`../../src/templates/page-archive.js
 
 module.exports = async gatsbyUtilities => {
     const pages = await getPages(gatsbyUtilities)
-    if (!pages?.length) {
+    if (!pages.length) {
         return
     }
     await createPageArchive({ pages, gatsbyUtilities })
